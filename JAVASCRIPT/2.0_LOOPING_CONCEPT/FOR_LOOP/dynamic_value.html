@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        // Create an empty array to store user inputs
+        let userInputs = [];
+
+        // Define how many times you want to ask the user for input
+        let numberOfInputs = 5;  // Change this value to accept more or fewer inputs
+
+        // Use a loop to gather inputs
+        for (let i = 0; i < numberOfInputs; i++) {
+            // Prompt user for input
+            let input = prompt("Enter a value (" + (i + 1) + "/" + numberOfInputs + "):");
+
+            // If user clicks "Cancel" or enters an empty input, stop the loop
+            if (input === null || input === "") {
+                console.log("Input was cancelled or empty, stopping input collection.");
+                break; // Exit the loop
+            }
+
+            // Add the input value to the array
+            userInputs.push(input);
+        }
+
+        // Display the collected array
+        console.log("Collected User Inputs: ", userInputs);
+    </script>
+</body>
+</html>
