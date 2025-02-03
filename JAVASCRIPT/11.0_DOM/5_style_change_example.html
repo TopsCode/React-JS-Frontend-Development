@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="myh1">Hello welcome to javascript</h1>
+
+    <button onclick="myfun()">Change color</button>
+
+    <script>
+        function myfun(){
+            console.log("button clicked !!!!");
+            let h1Element = document.getElementById("myh1");
+            console.log(h1Element);
+            
+            h1Element.style.color = "blue";
+        }
+    </script>
+</body>
+</html>
