@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <canvas id="mycanvas"></canvas>
+    <script>
+        var cnv = document.getElementById("mycanvas");
+        var cnt = cnv.getContext('2d') 
+        cnt.fillStyle = 'green';
+        cnt.fillRect(50, 10, 600, 600);
+        console.log(cnv);
+    </script> -->
+
+    <canvas id="canavs"></canvas>
+    <script>
+        var cnv=document.getElementById("canavs")
+        // console.log(cnv);
+        var big=cnv.getContext('2d')
+        big.fillStyle='red';
+        // left,top,right,bottom
+        big.fillRect(20,20,130,70);
+        // big.stroke(blue);
+        // big.moveTo(0, 0);
+        // big.lineTo(200, 100);
+        big.stroke();
+    </script>
+</body>
+</html>

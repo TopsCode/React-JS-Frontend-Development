@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Setting Stroke Cap Style on the Canvas</title>
+<style>
+	canvas {
+		border: 1px solid #000;
+	}
+</style>
+<!-- <script>
+	window.onload = function() {
+        var canvas = document.getElementById("myCanvas");
+        var context = canvas.getContext("2d");
+        context.lineWidth = 5;
+        context.strokeStyle = "orange";
+        context.moveTo(50, 150);
+        context.lineTo(250, 50);
+        context.stroke();
+    };
+</script> -->
+<script>
+    window.onload = function() {
+        var canvas = document.getElementById("myCanvas");
+        var context = canvas.getContext("2d");
+        context.lineWidth = 10;
+        context.strokeStyle = "orange";
+        context.lineCap = "round";
+        context.arc(150, 150, 80, 1.2 * Math.PI, 1.8 * Math.PI, false);
+        context.stroke();
+    };
+</script>
+
+<!-- <script>
+	window.onload = function() {
+        var canvas = document.getElementById("myCanvas");
+        var context = canvas.getContext("2d");
+        context.rect(50, 50, 200, 100); 
+        context.fillStyle = "#FB8B89";
+        context.fill();
+        context.lineWidth = 5;
+        context.strokeStyle = "black";
+        context.stroke();
+    };
+</script> -->
+
+
+</head>
+<body>
+    <canvas id="myCanvas" width="300" height="200"></canvas>
+</body>
+</html>
