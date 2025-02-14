@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      .fontProperty{
+          font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      }  
+      span{
+          font-weight: 700;
+      }
+      /* psudo class */
+      .Btn:hover{
+        /* box-shadow: 6px 4px 8px grey; */
+      }
+      a:link{
+        box-shadow: 6px 4px 8px grey;
+        color: chocolate;
+        /* background-color: blue; */
+
+      }
+      a:visited{
+        box-shadow: 6px 4px 8px blueviolet;
+        /* background-color: blue; */
+        color: darkblue;
+      }
+      input:focus {
+          border: 5px solid greenyellow;
+    /* outline: -webkit-focus-ring-color auto 5px; */
+}
+.pStyle{
+    width: 300px;
+    text-align: justify;
+    padding: 45px;
+    float: left;
+}
+    </style>
+</head>
+<body>
+    <div class="fontProperty">Test</div>
+    <p style = "font-variant:small-caps;">
+        This text will be rendered as small caps
+     </p>
+     <p style = "font-weight:bold;">
+        This font is bold.
+     </p>
+     
+     <p style = "font-weight:bolder;">
+        This font is bolder.
+     </p>
+     
+     <p style = "font-weight:500;">
+        This font is 500 weight.
+     </p>
+     <span>Bold text</span>
+     <p style = "font-size:20px;">
+        This font size is 20 pixels
+     </p>
+     
+     <p style = "font-size:small;">
+        This font size is small
+     </p>
+     
+     <p style = "font-size:large;">
+        This font size is large
+     </p>
+
+     <p style = "font-size: 14px;  
+     font-size-adjust: 0.5;">
+        This text is using a font-size-adjust value.
+     </p>
+
+     <p style = " width: 220px; font-stretch:ultra-expanded;">
+        If this doesn't appear to work, it is likely that your computer 
+        doesn't have a <br>condensed or expanded version of the font being used.
+     </p>
+     <p> If this doesn't appear to work, it is likely that your computer 
+        doesn't have a <br>condensed or expanded version of the font being used.</p>
+     <p style="letter-spacing: 3px;"> If this doesn't appear to work, it is likely that your computer 
+        doesn't have a <br>condensed or expanded version of the font being used.</p>
+     <p style="word-spacing: 3px;"> If this doesn't appear to work, it is likely that your computer 
+        doesn't have a <br>condensed or expanded version of the font being used.</p>
+        <p style = "text-indent:1cm;">
+            This text will have first line indented by 1cm and this line will remain at 
+            its actual position this is done by CSS text-indent property.
+         </p>
+
+         <a href="" style="text-decoration: none; padding: 5px;background-color: chocolate;box-shadow: 6px 4px 8px grey;">Click me</a>
+         <a class="Btn" href="" style="text-decoration: none; padding: 5px;background-color: chocolate;">Click me</a>
+
+         <a href="https://www.google.com/">Click Me For Gooogle</a>
+         <a href="http://topsint.com/topserp/faculty/index.php">Click Me For Gooogle</a>
+         <a href="https://www.dictionary.com/browse/something">Click Me For Gooogle</a>
+         <a href="https://www.google.com/">Click Me For Gooogle</a>
+         <a href="https://www.google.com/">Click Me For Gooogle</a>
+         <a href="https://www.google.com/">Click Me For Gooogle</a>
+
+         <input type="text">
+
+         <p style = "text-transform:capitalize;">
+            This will be capitalized
+         </p>
+         
+         <p style = "text-transform:uppercase;">
+            This will be in uppercase
+         </p>
+         
+         <p style = "text-transform:lowercase;">
+            This will be in lowercase
+         </p>
+         <label for="">testing    check</label>
+         <label for="">testing check</label>
+         <label for="">testing    </label>
+         <p style = "white-space:pre;">
+            This text has a line break 
+            and the white-space pre setting 
+            tells the browser to honor it just like the HTML pre tag.
+         </p>
+
+         <p>This text has a line break </p>
+         <p>and the white-space pre setting </p>
+         <p>tells the browser to honor it just like the HTML pre tag.</p>
+
+
+         <p class="pStyle">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+         <p class="pStyle">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+         <p class="pStyle">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+</body>
+</html>

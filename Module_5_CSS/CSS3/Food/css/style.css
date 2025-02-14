@@ -1,0 +1,268 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* utilites */
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+#Header {
+    background: url(/Images/Header.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    padding-bottom: 30px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+.navbar .logo {
+    width: 70px;
+}
+
+.navbar .icon-bar {
+    color: white;
+    font-size: 25px;
+    display: none;
+}
+
+.navlist {
+    list-style: none;
+}
+
+
+.navlist .list {
+    display: inline-block;
+    margin-left: 30px;
+}
+
+.navlist .list .nava {
+    text-decoration: none;
+    font-size: 25px;
+    color: #ffffff;
+    font-weight: 400;
+    font-family: "Montserrat";
+}
+
+.header-main {
+    color: #ffffff;
+    text-align: right;
+    padding: 40px 0;
+}
+
+.header-main .h1-header {
+    /*  20px,7.5vw,125px */
+    font-size: clamp(20px, 9.5vw, 125px);
+    font-weight: 700;
+    font-family: "Aleo";
+
+}
+
+.header-main .p-header {
+    width: 50%;
+    margin: 30px 0 30px 50%;
+    font-size: 30px;
+    font-size: clamp(16px, 3.5vw, 30px);
+    font-weight: 400;
+    font-family: "Montserrat";
+}
+
+.header-main .btn-header {
+    border-radius: 33px;
+    background-color: #ffffff;
+    font-size: clamp(16px, 3.5vw, 25px);
+    text-transform: uppercase;
+    color: #ff6f5e;
+    font-weight: 700;
+    font-family: "Montserrat";
+    text-align: center;
+    padding: 10px 20px;
+    border: none;
+}
+
+#sec1 {
+    background-color: #ffe2c6;
+    padding: 40px 0;
+}
+
+.team-content {
+    color: #ff6f5e;
+    text-align: center;
+}
+
+.our-h2 {
+    /* font-size: 64px; */
+    font-size: clamp(20px, 7.5vw, 64px);
+    font-weight: 700;
+    font-family: "Aleo";
+}
+
+.our-p {
+    font-size: clamp(16px, 3.5vw, 25px);
+    font-weight: 400;
+    font-family: "Montserrat";
+    width: 50%;
+    margin: 20px auto;
+}
+
+.team .row {
+    display: flex;
+}
+
+.team .row .col {
+    width: 33.33%;
+}
+
+.card {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.card .card-img {
+    width: 200px;
+    margin: 0 auto;
+}
+
+.card-content {
+    font-family: "Montserrat";
+    color: #ff6f5e;
+}
+
+.card-content .card-h4 {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.card-content .card-p {
+    font-size: 17px;
+    font-weight: 400;
+    width: 50%;
+    margin: 10px auto;
+}
+
+#sec2 {
+    padding: 40px 0;
+    background-color: #fff2e5;
+}
+
+.burger .row {
+    display: flex;
+    align-items: center;
+}
+
+.burger .row .col-40 {
+    width: 40%;
+}
+
+.burger .row .col-60 {
+    width: 60%;
+}
+
+.burger .burger-img {
+    width: 400px;
+    margin: 0 auto;
+}
+
+.burger-content {
+    color: #ff6f5e;
+    padding: 30px;
+}
+
+.burger-content .sec2-h2 {
+    font-size: clamp(20px, 7.9vw, 75px);
+    font-weight: 700;
+    font-family: "Aleo";
+}
+
+.burger-content .sec2-p {
+    width: 80%;
+    font-size: clamp(16px, 3.5vw, 30px);
+    font-weight: 400;
+    font-family: "Montserrat";
+    margin: 30px 0;
+}
+
+.burger-content .btn-burger {
+    font-size: clamp(16px, 3.5vw, 25px);
+    text-transform: uppercase;
+    color: #ffe2c6;
+    font-weight: 700;
+    font-family: "Montserrat";
+    text-align: center;
+    border-radius: 32px;
+    background-color: #ff6f5e;
+    border: none;
+    padding: 10px 20px;
+}
+
+#footer {
+    background-color: black;
+    padding: 70px 0;
+    color: white;
+}
+.footer1{
+    padding: 50px 0;
+}
+
+#footer .row {
+    display: flex;
+}
+
+#footer .row .col-40 {
+    width: 40%;
+}
+
+#footer .row .col-60 {
+    width: 60%;
+ 
+}
+
+.col-60 .row .col {
+    width: 33.33%;
+}
+
+.foot-h3 {
+    font-size: 32px;
+    color: #ffffff;
+    font-weight: 700;
+    font-family: "Aleo";
+}
+
+.foot-ul {
+    list-style: none;
+
+}
+.foot-ul{
+    margin-top: 10px;
+}
+.foot-ul .foot-li{
+    margin: 10px 0;
+}
+.foot-ul .foot-li .foot-a {
+    font-size: 24px;
+    color: #ffffff;
+    font-weight: 400;
+    text-decoration: none;
+    font-family: "Montserrat";
+}
+.foot-p{
+    width: 80%;
+    margin: 10px 0;
+font-size: 24px;
+color: #ffffff;
+font-weight: 400;
+font-family: "Montserrat";
+}
+.foot-icon i{
+    font-size: 30px;
+    letter-spacing: 8px;
+}

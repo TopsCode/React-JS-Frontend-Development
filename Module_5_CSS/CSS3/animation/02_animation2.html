@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main {
+            height: 200px;
+            width: 200px;
+            margin: 200px auto;
+            border: 2px solid;
+            /* mic ,sfari css */
+            -webkit-animation: roll-in-left 1s ease-out infinite alternate both;
+	        animation: roll-in-left 1s ease-out infinite alternate both;
+        }
+
+        @-webkit-keyframes roll-in-left {
+            0% {
+                -webkit-transform: translateX(-800px) rotate(-540deg);
+                transform: translateX(-800px) rotate(-540deg);
+                opacity: 0;
+            }
+
+            100% {
+                -webkit-transform: translateX(0) rotate(0deg);
+                transform: translateX(0) rotate(0deg);
+                opacity: 1;
+            }
+        }
+
+        @keyframes roll-in-left {
+            0% {
+                -webkit-transform: translateX(-800px) rotate(-540deg);
+                transform: translateX(-800px) rotate(-540deg);
+                opacity: 0;
+            }
+
+            100% {
+                -webkit-transform: translateX(0) rotate(0deg);
+                transform: translateX(0) rotate(0deg);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+
+    </div>
+</body>
+
+</html>

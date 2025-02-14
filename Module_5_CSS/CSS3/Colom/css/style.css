@@ -1,0 +1,81 @@
+body 
+{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background: url('../images/back.webp') no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.border-rad1
+{
+    width: 50%;
+    height: auto;
+    margin: 10px;
+    padding: 25px;
+    margin-left: 25%;
+    margin-top: 2%;
+    border: solid 35px transparent;
+    background-color: rgba(25,0,0,0.2);
+    color: white;
+    -webkit-border-image: url('../images/border.jpg') 95 round;
+    -moz-border-image: url('../images/border.jpg') 95 round;
+    -o-border-image: url('../images/border.jpg') 95 round;
+    border-image: url('../images/border.jpg') 95 round;
+}
+
+.border-rad1 p 
+{
+    text-align: justify;
+    font-size: 16px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    letter-spacing: 0px;
+    text-indent: 45px;
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    -o-column-count: 2;
+    column-count: 2;
+
+    -webkit-column-gap: 50px;
+    -moz-column-gap: 50px;
+    -o-column-gap: 50px;
+    column-gap: 50px;
+
+}
+
+.border-rad2
+{
+    width: 50%;
+    height: auto;
+    margin: 10px;
+    padding: 25px;
+    margin-left: 25%;
+    margin-top: 2%;
+    border: solid 35px transparent;
+    background-color: white;
+    -webkit-border-image: url('../images/border1.png') 125 round;
+    -moz-border-image: url('../images/border1.png') 125 round;
+    -o-border-image: url('../images/border1.png') 125 round;
+    border-image: url('../images/border1.png') 125 round;
+}
+
+
+.border-rad2 p 
+{
+    text-align: justify;
+    font-size: 16px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    letter-spacing: 0px;
+    text-indent: 45px;
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    -o-column-count: 2;
+    column-count: 2;
+
+    -webkit-column-gap: 50px;
+    -moz-column-gap: 50px;
+    -o-column-gap: 50px;
+    column-gap: 50px;
+
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            height: 300px;
+            width: 480px;
+            border: 2px solid;
+            overflow: hidden;
+        }
+        .img {
+            height: 300px;
+            width: 500px;
+            border: 2px solid;
+            background: url("https://p.w3layouts.com/demos_new/template_demo/20-06-2017/elite_shoppy-demo_Free/1660570665/web/images/bottom1.jpg");
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            transform: translateX(-20px);
+            transition: .6s;
+        }
+
+        .border {
+            height: 250px;
+            width: 400px;
+            border: 5px solid white;
+            margin: 25px auto;
+            transform: translateX(-20px);
+            transition: .6s;
+            color: white;
+            font-size: 40px;
+            letter-spacing: 5px;
+            text-align: right;
+            line-height: 250px;
+            opacity: 0;
+        }
+
+        .img:hover .border {
+            transform: translateX(0px);
+            opacity: 1;
+        }
+        .img:hover{
+            transform: translateX(0px);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="img">
+            <div class="border">
+                New Colthes
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
