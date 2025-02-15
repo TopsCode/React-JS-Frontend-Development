@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <!-- Dropdowns
+Toggle contextual overlays for displaying lists of links and more with the Bootstrap dropdown plugin. -->
+
+    <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown button
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+        </ul>
+    </div>
+
+
+    <!-- Split button
+Similarly, create split button dropdowns with virtually the same markup as single button dropdowns, but with the addition of .dropdown-toggle-split for proper spacing around the dropdown caret.
+
+We use this extra class to reduce the horizontal padding on either side of the caret by 25% and remove the margin-left that’s added for regular button dropdowns. Those extra changes keep the caret centered in the split button and provide a more appropriately sized hit area next to the main button.
+ -->
+
+    <!-- Example split danger button -->
+    <div class="btn-group">
+        <button type="button" class="btn btn-danger">Action</button>
+        <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            <span class="visually-hidden">Toggle Dropdown</span>
+        </button>
+        <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <li>
+                <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item" href="#">Separated link</a></li>
+        </ul>
+    </div>
+
+
+
+    <!-- Large button groups (default and split) -->
+<div class="btn-group">
+    <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+      Large button
+    </button>
+    <ul class="dropdown-menu">
+      ...
+    </ul>
+  </div>
+  <div class="btn-group">
+    <button class="btn btn-secondary btn-lg" type="button">
+      Large split button
+    </button>
+    <button type="button" class="btn btn-lg btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+      <span class="visually-hidden">Toggle Dropdown</span>
+    </button>
+    <ul class="dropdown-menu">
+      ...
+    </ul>
+  </div>
+
+
+  <!-- Dropup
+Trigger dropdown menus above elements by adding .dropup to the parent element -->
+
+<!-- Default dropup button -->
+<div class="btn-group dropup">
+    <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+      Dropup
+    </button>
+    <ul class="dropdown-menu">
+      <!-- Dropdown menu links -->
+    </ul>
+  </div>
+  
+  <!-- Split dropup button -->
+  <div class="btn-group dropup">
+    <button type="button" class="btn btn-secondary">
+      Split dropup
+    </button>
+    <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+      <span class="visually-hidden">Toggle Dropdown</span>
+    </button>
+    <ul class="dropdown-menu">
+      <!-- Dropdown menu links -->
+    </ul>
+  </div>
+
+
+  <!-- Dropright
+Trigger dropdown menus at the right of the elements by adding .dropend to the parent element. -->
+
+
+<!-- Default dropend button -->
+<div class="btn-group dropend">
+    <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+      Dropright
+    </button>
+    <ul class="dropdown-menu">
+      <!-- Dropdown menu links -->
+    </ul>
+  </div>
+  
+  <!-- Split dropend button -->
+  <div class="btn-group dropend">
+    <button type="button" class="btn btn-secondary">
+      Split dropend
+    </button>
+    <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+      <span class="visually-hidden">Toggle Dropright</span>
+    </button>
+    <ul class="dropdown-menu">
+      <!-- Dropdown menu links -->
+    </ul>
+  </div>
+
+
+
+  <!-- Dropleft
+Trigger dropdown menus at the left of the elements by adding .dropstart to the parent element. -->
+
+
+<!-- Default dropstart button -->
+<div class="btn-group dropstart">
+    <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+      Dropstart
+    </button>
+    <ul class="dropdown-menu">
+      <!-- Dropdown menu links -->
+    </ul>
+  </div>
+  
+  <!-- Split dropstart button -->
+  <div class="btn-group">
+    <div class="btn-group dropstart" role="group">
+      <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+        <span class="visually-hidden">Toggle Dropstart</span>
+      </button>
+      <ul class="dropdown-menu">
+        <!-- Dropdown menu links -->
+      </ul>
+    </div>
+    <button type="button" class="btn btn-secondary">
+      Split dropstart
+    </button>
+  </div>
+</body>
+
+</html>

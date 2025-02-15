@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+    <h1 className='font-sans text-xs'>Hello Font data</h1>
+    <h1 className='font-serif text-xl text-left'>Hello Font data</h1>
+    <h1 className='font-mono text-4xl text-center overline'>Hello Font data</h1>
+    <h1 className='font-sans text-6xl text-right underline decoration-orange-600 decoration-dotted'>Hello Font data</h1>
+    <h1 className='font-serif text-7xl uppercase '>Hello Font data</h1>
+    <h1 className='font-mono text-9xl text-[rgb(162,223,105)] capitalize'>hello font data</h1>
+    {/* <h1 className='font-sans text-[200px]'>Hello Font data</h1> */}
+    <h1 className='font-serif italic border-4 border-double rounded-2xl border-black'>Hello Font data</h1>
+    <h1 className='font-mono'>Hello Font data</h1>
+
+
+
+    <div className="main flex">
+        <div className="bg-green-300 w-1/2">first</div>
+        <div className='bg-blue-400 w-1/2'>second</div>
+    </div>
+    <div className="container bg-red-400 mx-auto w-10/12 opacity-50">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab illo pariatur sequi quam veritatis minima, placeat
+        optio, itaque fuga fugit est voluptatem dolor enim similique possimus aliquam, ducimus commodi maxime.
+    </div>
+    <div className="flex justify-around h-56 bg-slate-500 content-center">
+        <div className="size-28 border-4 border-red-300 scale-75">1</div>
+        <div className="size-28 border-4 border-red-300 scale-100 rotate-45">1</div>
+        <div className="size-28 border-4 border-red-300 scale-125">1</div>
+    </div>
+    <div
+        className="main size-52 md:bg-slate-400 hover:bg-red-400 hover:scale-75 hover:text-lime-400 mx-auto shadow-2xl shadow-teal-600 my-5">
+        Hello this data
+    </div>
+    <button className='btn-blue'>Component</button>
+
+    <button className='btn-blue'>Component 2</button>
+</body>
+
+</html>
