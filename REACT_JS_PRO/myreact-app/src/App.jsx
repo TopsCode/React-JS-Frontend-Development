@@ -1,10 +1,11 @@
 import React from 'react'
-import JSXExample1 from './1_JSX_Example/JSXExample1'
+import FunctionExample1 from './2_FUNCTION_COMPONENTS/FunctionExample1'
+
 
 export default function App() {
   return (
     <div>
-      <JSXExample1/>
+      <FunctionExample1/>      
     </div>
   )
 }
