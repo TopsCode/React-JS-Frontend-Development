@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            height: 400px;
+            width: 600px;
+            background-image: url("https://images.pexels.com/photos/30369434/pexels-photo-30369434/free-photo-of-scenic-view-of-historic-tower-on-lopud-island.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load");
+            /* filter: url("https://interactive-examples.mdn.mozilla.net/media/examples/firefox-logo.svg"); */
+            background-size: 100% 100%;
+            filter: blur(5px);
+            filter: contrast(200%);
+            filter: grayscale(80%);
+            filter: hue-rotate(90deg);
+            filter: drop-shadow(16px 16px 20px red) invert(75%);
+        }
+    </style>
+</head>
+<body>
+    /* <filter-function> values */
+        filter: blur(5px);
+        filter: brightness(0.4);
+        filter: contrast(200%);
+        filter: drop-shadow(16px 16px 20px blue);
+        filter: grayscale(50%);
+        filter: hue-rotate(90deg);
+        filter: invert(75%);
+        filter: opacity(25%);
+        filter: saturate(30%);
+        filter: sepia(60%);
+        
+        /* URL */
+        filter: url("filters.svg#filter-id");
+        
+        /* Multiple filters */
+        filter: contrast(175%) brightness(3%);
+        filter: drop-shadow(3px 3px red) sepia(100%) drop-shadow(-3px -3px blue);
+        
+        /* Use no filter */
+        filter: none;
+        
+        /* Global values */
+        filter: inherit;
+        filter: initial;
+        filter: revert;
+        filter: revert-layer;
+        filter: unset;
+
+        <div class="main">
+
+        </div>
+        
+</body>
+</html>

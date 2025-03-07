@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Drawing Text on the Canvas</title>
+<style>
+	canvas {
+		border: 1px solid #000;
+	}
+</style>
+<!-- <script>
+    window.onload = function() {
+        var canvas = document.getElementById("myCanvas");
+        var context = canvas.getContext("2d");
+        context.font = "bold 32px Arial";
+        context.fillText("Hello World!", 50, 100);
+    };
+</script> -->
+<!-- <script>
+	window.onload = function() {
+        var canvas = document.getElementById("myCanvas");
+        var context = canvas.getContext("2d");
+        context.font = "bold 32px Arial";
+        context.textAlign = "center";
+        context.textBaseline = "middle";
+        context.fillStyle = "orange";
+        context.fillText("Hello World!", 150, 100);
+    };
+</script> -->
+<script>
+	window.onload = function() {
+        var canvas = document.getElementById("myCanvas");
+        var context = canvas.getContext("2d");
+        context.font = "bold 32px Arial";
+        context.textAlign = "center";
+        context.textBaseline = "middle";
+        context.strokeStyle = "orange";
+        context.strokeText("Hello World!", 150, 100);
+    };
+</script>
+</head>
+<body>
+    <canvas id="myCanvas" width="300" height="200"></canvas>
+</body>
+</html>

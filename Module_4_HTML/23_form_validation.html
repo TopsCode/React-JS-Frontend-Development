@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- pattren = a-zA-Z{10} -->
+
+    <form action="">
+        <fieldset>
+            <legend>register from </legend>
+            <table  align="center">
+                <!-- <caption>Form data</caption> -->
+                <tr>
+                    <td><label for="">name</label></td>
+                    <!-- <td><input type="text" placeholder="Enter your Name" pattern="[a-zA-Z]+" required></td> -->
+                    <td><input type="text" placeholder="Enter your Name" pattern="[a-zA-Z]{4,8}" required></td>
+                </tr>
+                <tr>
+                    <td><label for="">Surname</label></td>
+                    <td><input type="text" placeholder="Enter your SurName" required></td>
+                </tr>
+                <tr>
+                    <td><label for="">Email</label></td>
+                    <!-- shubhamjadav.tops@gmail.com
+                    [a-z0-9#.*]+'@'+[a-z]+"."+[a-z]{2,3}$ -->
+                    <td><input type="email" placeholder="Enter your Email" required></td>
+                </tr>
+                <tr>
+                    <td><label for="">Phone</label></td>
+                    <!-- <td><input type="text" placeholder="Enter your Phone number" pattern="[0-9]+" required></td> -->
+                    <td><input type="text" placeholder="Enter your Phone number" pattern="[0-9]{10}" maxlength="10" required></td>
+                </tr>
+                <tr>
+                    <td><label for="">Qunty</label></td>
+                    <!-- <td><input type="text" placeholder="Enter your Phone number" pattern="[0-9]+" required></td> -->
+                    <td><input type="number" placeholder="Enter your Phone number" pattern="[0-9]+" min="1" max="6" required></td>
+                </tr>
+                <tr>
+                    <!-- [A-Z]+[a-z0-9]+@#+[0-9]+[a-z]{8,12} -->
+                    <td><label for="">Password</label></td>
+                    <td><input type="password" placeholder="Enter your Password" pattern="[a-zA-Z0-9]{8,12}" minlength="8" maxlength="12"  required></td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="">Courty</label>
+                    </td>
+                    <td>
+                        <select name="" id="">
+                            <option value="" hidden>---select your coutry---</option>
+                            <option value="">India</option>
+                            <option value="">Usa</option>
+                            <option value="">Uae</option>
+                            <option value="">Canda</option>
+                            <option value="">China</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="">address</label></td>
+                    <td><textarea name="" id="" required></textarea></td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center"><input type="submit"></td>
+                    <!-- <td></td> -->
+                </tr>
+                
+
+
+            </table>
+        </fieldset>
+    </form>
+</body>
+
+</html>

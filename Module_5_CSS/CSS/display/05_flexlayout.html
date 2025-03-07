@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .nav{
+            display: flex;
+            background-color: lightcoral;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .navlist li{
+            display: inline-block;
+            background-color: aqua;
+            padding: 10px 20px;
+            margin: 0 20px;
+        }
+        .sec1{
+            background-color: aqua;
+            display: flex;
+        }
+        .card1,.card2{
+            width: 50%;
+            height: 300px;
+            border: 2px solid;
+        }
+        .sec2{
+            background-color: rgb(177, 9, 177);
+            display: flex;
+        }
+        .card{
+    
+            width: 25%;
+            height: 400px;
+            border: 2px solid;
+        }
+        .top,.bottom{
+            height: 50%;
+            width: 100%;
+            border: 2px solid gold;   
+        }
+        #card1{
+            display: flex;
+            flex-direction: column;
+        }
+        .left,.right{
+            width: 50%;
+            height: 400px;
+            border: 2px solid gray;
+        }
+        #card2{
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="nav">
+            <div class="logo">logo</div>
+            <ul class="navlist">
+                <li>Home</li>
+                <li>About</li>
+                <li>Contact</li>
+                <li>Help</li>
+            </ul>
+            <div class="icon">
+                icon
+            </div>
+        </nav>
+    </header>
+    <section class="sec1">
+        <div class="card1">1</div>
+        <div class="card2">2</div>
+    </section>
+    <section class="sec2">
+        <div class="card">1</div>
+        <div class="card" id="card1">
+            <div class="top">top</div>
+            <div class="bottom">bottom</div>
+        </div>
+        <div class="card" id="card2">
+            <div class="left">left</div>
+            <div class="right">right</div>
+        </div>
+        <div class="card">4</div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* pc */
+        .main {
+            height: 400px;
+            background: lightcoral;
+        }
+         /* pc  992 - 1160 */
+         @media only screen and (max-width:1160px) {
+            .main {
+                width: 50%;
+                background: linear-gradient(red, green,blue);
+            }
+        }
+
+        /* min tab and pc 768 - 992 */
+        @media only screen and (max-width:992px) {
+            .main {
+                background: linear-gradient(red, green);
+            }
+        }
+
+        /* tables 500 - 768 */
+        @media only screen and (max-width:768px) {
+            .main {
+                width: 100%;
+                background: aqua;
+            }
+        }
+
+        /* mobile 0-500 */
+        @media only screen and (max-width:500px) {
+            .main {
+                background: red;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- max :- mobile,tables,pc,tv :- pc -->
+    <!-- min :- pc,tables,mobile :- mobile -->
+
+    <div class="main">
+
+    </div>
+
+
+</body>
+
+</html>

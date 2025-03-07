@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Example of clearing floats</title>
+<style>
+    .container{
+        background:yellow;
+        border: 1px solid #000000;      
+    }
+    /* .containerContent {
+        content:"Something";
+    } */
+    .clearfix:after {
+        content:".";
+        display:block;
+        height:0;
+        clear:both;
+        /* width: 80%; */
+        /* height: 40px; */
+        visibility:hidden;
+    }
+    .container div {
+        width: 200px;        
+        margin: 10px;
+        padding: 10px;
+    }
+    div.red {
+        float: left;       
+        background: #ff0000
+    }
+    div.green {
+        float: right;
+        background: #00ff00;
+    }
+</style>
+</head>
+<body>
+    <!-- <div class="containerContent">
+    </div> -->
+    <div class="container clearfix">
+        <!-- tops -->
+        <div class="red">Floated to left.</div>
+        <div class="green">Floated to right.</div>
+    </div>
+    <p><strong>Warning:</strong> Internet Explorer 7 and earlier version does not support the <code>:after</code> pseudo element. IE8 supports, but require a <code>!DOCTYPE</code> to be declared.</p>
+</body>
+</html>                              

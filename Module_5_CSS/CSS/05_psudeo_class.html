@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* frist  */
+        ul li:first-child{
+            background-color: red;
+        }
+        /* last */
+        ul li:last-child{
+            background-color: blue;
+        }
+        /* top */
+        ul li:nth-child(4){
+            background-color: aqua;
+        }
+        /* last */
+        ul li:nth-last-child(2){
+            background-color: brown;
+        }
+        .nav li:nth-child(odd){
+            background-color: lightcoral;
+        }
+        .nav li:nth-child(even){
+            background-color: lightgreen;
+        }
+        .main{
+            height: 200px;
+            width: 200px;
+            border: 2px solid;
+            transition: 1s;
+        }
+        .main:hover {
+            background-color: red;
+            border-radius: 50%;
+            transform: translate(100px,100px);
+            
+        }
+        input{
+            margin-top: 20px;
+            border: none;
+        }
+        input:focus{
+            background-color: lightcoral;
+            color: aqua;
+            outline: 2px solid green;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <!-- selector -->
+    <!-- psudeo class =  : -->
+    <!-- psudeo element = :: -->
+
+    <ul>
+        <li>One</li>
+        <li>Two</li>
+        <li>three</li>
+        <li>four</li>
+        <li>five</li>
+        <li>six</li>
+        <li>seven</li>
+        <li>eight</li>
+    </ul>
+
+    <ul class="nav">
+        <li>One</li>
+        <li>Two</li>
+        <li>three</li>
+        <li>four</li>
+        <li>five</li>
+        <li>six</li>
+        <li>seven</li>
+        
+    </ul>
+
+
+    <div class="main">
+
+    </div>
+
+    <input type="text" placeholder="Enter your name">
+</body>
+</html>

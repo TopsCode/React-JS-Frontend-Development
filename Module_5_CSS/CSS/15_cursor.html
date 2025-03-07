@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    .cursorPOINTERcss{
+        cursor: pointer;
+    }
+
+    .customCur{
+        cursor: url("cursor (1).cur"), default;
+        /* cursor: url("C:/xampp/htdocs/JayWD/yejee/CSS/tenor.gif"), default; */
+        /* cursor: url("C:/xampp/htdocs/JayWD/yejee/CSS/tenor.gif"), default; */
+        /* cursor: url("tenor.gif"), default; */
+    }
+    </style>
+</head>
+<body id="ChangeCursor">
+    <button onclick="changeCursor()" >Click Me</button>
+    <p>
+
+        Default Cursor	default	a:hover{cursor:default;}	
+    </p>
+
+    <p>Pointer Cursor	pointer	a:hover{cursor:pointer;}	</p>
+    <p>Text Cursor	text	a:hover{cursor:text;}	</p>
+    <p>Wait Cursor	wait	a:hover{cursor:wait;}	</p>
+    <p>Help Cursor	help	a:hover{cursor:help;}	</p>
+    <p>Progress Cursor	progress	a:hover{cursor:progress;}	</p>
+    <p>Crosshair Cursor	crosshair	a:hover{cursor:crosshair;}	</p>
+    <p>Move Cursor	move	a:hover{cursor:move;}	</p>
+    <p>Custom Cursor	url()	a:hover{cursor:url("custom.cur"), default;}	</p>
+    <p >TOPS Technologies</p>
+    <p class="cursorPOINTERcss">TOPS Technologies</p>
+    <p class="customCur">TOPS Technologies</p>
+</body>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+<script>
+    function changeCursor() {
+        // document.getElementById("ChangeCursor").
+        $("#ChangeCursor").css('cursor','url("cursor (1).cur"), default')
+    }
+</script>
+</html>
