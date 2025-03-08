@@ -7,12 +7,13 @@ import KeyExample1 from './8_KEYS_EXAMPLE/KeyExample1'
 import UseEffectExample1 from './9_HOOKS/USE_EEFECT/UseEffectExample1'
 import UseEffect1 from './9_HOOKS/USE_EEFECT/UseEffect1'
 import UseEffect2 from './9_HOOKS/USE_EEFECT/UseEffect2'
+import ThemeSwitcher from './9_HOOKS/USE_EEFECT/ThemeSwitcher'
 
 
 export default function App() {
   return (
     <div>
-      <UseEffect2/>
+      <ThemeSwitcher/>
     </div>
   )
 }
