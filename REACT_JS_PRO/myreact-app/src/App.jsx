@@ -7,12 +7,13 @@ import State_example from './5_STATE/State_example'
 import InlineCss1 from './6_STYLE/InlineCss1'
 import ExternalCss2 from './6_STYLE/ExternalCss2'
 import ButtonCom from './6_STYLE/ButtonCom'
+import StyledComponentExample from './6_STYLE/StyledComponentExample'
 
 
 export default function App() {
   return (
     <div>
-      <ButtonCom/>
+      <StyledComponentExample/>
     </div>
   )
 }
