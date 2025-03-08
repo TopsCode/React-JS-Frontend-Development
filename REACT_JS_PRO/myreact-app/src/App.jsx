@@ -5,12 +5,13 @@ import ObjectExample2 from './7_ARRAY_OBJECT_LIST/ObjectMapExample/ObjectExample
 import ArrayObjectExample from './7_ARRAY_OBJECT_LIST/ArrayObjectExample'
 import KeyExample1 from './8_KEYS_EXAMPLE/KeyExample1'
 import UseEffectExample1 from './9_HOOKS/USE_EEFECT/UseEffectExample1'
+import UseEffect1 from './9_HOOKS/USE_EEFECT/UseEffect1'
 
 
 export default function App() {
   return (
     <div>
-      <UseEffectExample1/>
+      <UseEffect1/>
     </div>
   )
 }
