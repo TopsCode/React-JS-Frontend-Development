@@ -10,12 +10,13 @@ import UseEffect2 from './9_HOOKS/USE_EEFECT/UseEffect2'
 import ThemeSwitcher from './9_HOOKS/USE_EEFECT/ThemeSwitcher'
 import FetchExample from './10_API/FetchExample'
 import FetchExample2 from './10_API/FetchExample2'
+import AxiosExample_Post from './10_API/AxiosExample_Post'
 
 
 export default function App() {
   return (
     <div>
-      <FetchExample2/>
+      <AxiosExample_Post/>
     </div>
   )
 }
