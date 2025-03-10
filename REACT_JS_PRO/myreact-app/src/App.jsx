@@ -8,12 +8,13 @@ import UseEffectExample1 from './9_HOOKS/USE_EEFECT/UseEffectExample1'
 import UseEffect1 from './9_HOOKS/USE_EEFECT/UseEffect1'
 import UseEffect2 from './9_HOOKS/USE_EEFECT/UseEffect2'
 import ThemeSwitcher from './9_HOOKS/USE_EEFECT/ThemeSwitcher'
+import FetchExample from './10_API/FetchExample'
 
 
 export default function App() {
   return (
     <div>
-      <ThemeSwitcher/>
+      <FetchExample/>
     </div>
   )
 }
