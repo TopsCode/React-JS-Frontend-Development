@@ -11,12 +11,13 @@ import ThemeSwitcher from './9_HOOKS/USE_EEFECT/ThemeSwitcher'
 import FetchExample from './10_API/FetchExample'
 import FetchExample2 from './10_API/FetchExample2'
 import AxiosExample_Post from './10_API/AxiosExample_Post'
+import AppMain from './9_HOOKS/USE_CONTEXT_PRO/AppMain'
 
 
 export default function App() {
   return (
     <div>
-      <AxiosExample_Post/>
+      <AppMain/>
     </div>
   )
 }
