@@ -12,12 +12,13 @@ import FetchExample from './10_API/FetchExample'
 import FetchExample2 from './10_API/FetchExample2'
 import AxiosExample_Post from './10_API/AxiosExample_Post'
 import AppMain from './9_HOOKS/USE_CONTEXT_PRO/AppMain'
+import AppMainTheme from './9_HOOKS/USE_CONTEXT_PRO/AppMainTheme'
 
 
 export default function App() {
   return (
     <div>
-      <AppMain/>
+      <AppMainTheme/>
     </div>
   )
 }
