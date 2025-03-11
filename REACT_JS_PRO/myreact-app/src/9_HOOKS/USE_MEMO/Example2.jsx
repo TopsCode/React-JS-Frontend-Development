@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useMemo, useState } from 'react'
 
 export default function Example2() 
 {
@@ -9,32 +9,31 @@ export default function Example2()
         { id: 4, name: "Dhruv" },
     ];
 
-    function UserList() 
-    {
-        const [search, setSearch] = useState("");
+    const [search, setSearch] = useState("");
 
-        const filteredUsers = useMemo(() => {
-            console.log("Filtering users...");
-            
-            return users.filter((user) =>
-            user.name.toLowerCase().includes(search.toLowerCase())
-            );
-        }, [search]); // Recalculates only when "search" changes
+    const filteredUsers = useMemo(() => {
+        console.log("Filtering users...");
+        
+        return users.filter((user) =>
+        user.name.toLowerCase().includes(search.toLowerCase())
+        );
+    }, [search]); // Recalculates only when "search" changes
 
-        return (
-            <div>
-              <input
-                type="text"
-                placeholder="Search users..."
-                value={search}
-                onChange={(e) => setSearch(e.target.value)}
-              />
-              <ul>
-                {filteredUsers.map((user) => (
-                  <li key={user.id}>{user.name}</li>
-                ))}
-              </ul>
-            </div>
-          );
-    }
+
+    return (
+        <div>
+            <input
+            type="text"
+            placeholder="Search users..."
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            />
+            <ul>
+            {filteredUsers.map((user) => (
+                <li key={user.id}>{user.name}</li>
+            ))}
+            </ul>
+        </div>
+    );
+    
 }
