@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useMemo, useState } from 'react'
 
 export default function Example1() {
     const [count, setCount] = useState(0);
