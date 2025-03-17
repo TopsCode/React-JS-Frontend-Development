@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chart.js Example</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        .chart-container {
+            width: 80%;
+            max-width: 600px;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Chart.js Example</h1>
+
+    <!-- Bar Chart -->
+    <div class="chart-container">
+        <canvas id="barChart"></canvas>
+    </div>
+
+    <!-- Line Chart -->
+    <div class="chart-container">
+        <canvas id="lineChart"></canvas>
+    </div>
+
+    <!-- Pie Chart -->
+    <div class="chart-container">
+        <canvas id="pieChart"></canvas>
+    </div>
+
+    <script>
+        // Bar Chart
+        const barCtx = document.getElementById("barChart").getContext("2d");
+        new Chart(barCtx, {
+            type: "bar",
+            data: {
+                labels: ["Red", "Blue", "Yellow", "Green", "Purple"],
+                datasets: [{
+                    label: "Votes",
+                    data: [12, 19, 3, 5, 8],
+                    backgroundColor: ["red", "blue", "yellow", "green", "purple"],
+                    borderColor: "black",
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+
+        // Line Chart
+        const lineCtx = document.getElementById("lineChart").getContext("2d");
+        new Chart(lineCtx, {
+            type: "line",
+            data: {
+                labels: ["Jan", "Feb", "Mar", "Apr", "May"],
+                datasets: [{
+                    label: "Sales",
+                    data: [3, 12, 5, 8, 15],
+                    borderColor: "blue",
+                    backgroundColor: "rgba(0, 0, 255, 0.3)",
+                    borderWidth: 2,
+                    fill: true
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+
+        // Pie Chart
+        const pieCtx = document.getElementById("pieChart").getContext("2d");
+        new Chart(pieCtx, {
+            type: "pie",
+            data: {
+                labels: ["Apple", "Banana", "Cherry"],
+                datasets: [{
+                    data: [30, 50, 20],
+                    backgroundColor: ["red", "yellow", "pink"]
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: "top"
+                    }
+                }
+            }
+        });
+    </script>
+
+</body>
+</html>
