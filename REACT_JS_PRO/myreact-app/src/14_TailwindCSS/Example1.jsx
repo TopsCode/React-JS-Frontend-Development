@@ -2,9 +2,9 @@ import React from 'react'
 
 export default function Example1() {
     return (
-        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-          Click Me
-        </button>
+       <div className='bg-black'>
+          <h1 className='text-center text-purple-600 text-3xl'>Hello welcome to Tailwind Css</h1>
+       </div>
       );
 }
 
