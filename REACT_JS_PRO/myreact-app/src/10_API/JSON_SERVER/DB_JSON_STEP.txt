@@ -1,0 +1,26 @@
+for dummy JSON server
+
+npm install -g json-server 
+npm list -g json-server
+
+make db.json file 
+
+----------------------------------------------------------
+{
+    "posts": [
+      { "id": 1, "title": "Hello World", "content": "This is a dummy post." },
+      { "id": 2, "title": "Another Post", "content": "This is another dummy post." }
+    ],
+    "comments": [
+      { "id": 1, "postId": 1, "author": "Alice", "text": "Great post!" },
+      { "id": 2, "postId": 1, "author": "Bob", "text": "Thanks for sharing!" }
+    ]
+}
+----------------------------------------------------------
+go to specific directory for e.g. 
+
+# cd src/002_DUMMY_JSON_API
+# npx json-server --watch db.json --port 5000
+
+http://localhost:5000/posts
+http://localhost:5000/comments
