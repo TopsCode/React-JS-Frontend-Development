@@ -1,0 +1,64 @@
+{
+  "categories": [
+    {
+      "id": "c9c0",
+      "name": "Electronics"
+    },
+    {
+      "id": "d4a3",
+      "name": "Men"
+    },
+    {
+      "id": "ccc7",
+      "name": "Women"
+    },
+    {
+      "id": "c5e9",
+      "name": "Furniture"
+    }
+  ],
+  "products": [
+    {
+      "id": "ee47",
+      "name": "Keyboard",
+      "description": "HP wireless keyboard & mouse combo 1600 DPI Mouse,Ultra",
+      "price": "1999",
+      "categoryID": "c9c0",
+      "stock": 10,
+      "rating": 4.2,
+      "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/keyboard/h/y/v/-original-imah3zvgzygyxsjp.jpeg?q=70"
+    },
+    {
+      "id": "10d4",
+      "name": "Mouse",
+      "description": "Arctic Fox Breathing Lights and DPI Upto 3600 Wired Opt.",
+      "price": "249",
+      "categoryID": "c9c0",
+      "stock": 20,
+      "rating": 4.3,
+      "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/mouse/i/b/o/breathing-lights-and-dpi-upto-3600-arctic-fox-original-imah3wg49fxkfd39.jpeg?q=70"
+    },
+    {
+      "id": "b821",
+      "name": "Wardrobe",
+      "description": "Attache Carbon Steel Collapsible Wardrobe",
+      "price": "1999",
+      "categoryID": "c5e9",
+      "stock": 20,
+      "rating": 3.5,
+      "image": "https://rukminim2.flixcart.com/image/612/612/xif0q/collapsible-wardrobe/k/f/q/450-carbon-steel-1700-3-5-dew-3-door-brown-dewberries-brown-1300-original-imagg7htbbzhbetc.jpeg?q=70"
+    }
+  ],
+  "users": [
+    {
+      "id": "1fe9",
+      "name": "Anjali",
+      "email": "anjali@gmail.com"
+    },
+    {
+      "id": "7208",
+      "name": "Priya",
+      "email": "priya@gmail.com"
+    }
+  ]
+}

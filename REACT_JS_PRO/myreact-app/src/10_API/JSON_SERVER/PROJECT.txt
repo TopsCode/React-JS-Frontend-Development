@@ -1,0 +1,41 @@
+Products API (/products)
+
+GET /products → Fetch all products
+
+GET /products/:id → Fetch a single product by ID
+
+POST /products → Add a new product (seller action)
+
+PUT /products/:id → Update a product (seller action)
+
+DELETE /products/:id → Delete a product (seller action)
+===========================================================
+Users API (/users)
+===========================================================
+GET /users → Fetch all users
+
+GET /users/:id → Fetch a specific user
+
+POST /users → Add a new user (seller/buyer registration)
+===========================================================
+Orders API (/orders)
+===========================================================
+GET /orders → Fetch all orders
+
+GET /orders/:id → Fetch a specific order
+
+POST /orders → Place a new order (buyer action)
+
+PUT /orders/:id → Update order status (seller action)
+
+DELETE /orders/:id → Cancel an order
+=========================================================== 
+Cart API (Optional, if implementing a cart system) (/cart)
+
+GET /cart → Fetch cart items
+
+POST /cart → Add item to cart
+
+DELETE /cart/:id → Remove item from cart
+
+=========================================================== 
