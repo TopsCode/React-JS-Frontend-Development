@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { useState } from 'react'
 import ViewProducts from './ViewProducts';
 import CategoryWiseProducts from './CategoryWiseProducts';
+import UserViewProducts from './UserViewProducts';
 
 export default function GetUser() {
     const [users,setUsers] = useState([]);
@@ -27,7 +28,9 @@ export default function GetUser() {
             <div style={{margin:"30px"}}>
                 <h1>Welcome {users[0].name}</h1>
 
-                <CategoryWiseProducts/>
+                {/* <UserViewProducts id={users[0].id} name={users[0].name} /> */}
+                <UserViewProducts users={users[0]}/>
+                
             </div>
             
             :

@@ -60,5 +60,28 @@
       "name": "Priya",
       "email": "priya@gmail.com"
     }
+  ],
+  "cart": [
+    {
+      "id": "9cae",
+      "userID": "1fe9",
+      "productID": "ee47",
+      "qty": 1,
+      "price": "1999"
+    },
+    {
+      "id": "d39e",
+      "userID": "1fe9",
+      "productID": "10d4",
+      "qty": 1,
+      "price": "249"
+    },
+    {
+      "id": "b12e",
+      "userID": "7208",
+      "productID": "b821",
+      "qty": 1,
+      "price": "1999"
+    }
   ]
 }

@@ -1,10 +1,12 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 
-export default function CategoryWiseProducts() {
+export default function UserViewProducts(props) {
 
     const [products,setProducts] = useState([]);
     const [categories,setCategories] = useState([]);
+
+    
     
     const fetchProducts=async(cid="")=>{
         try {
@@ -49,8 +51,18 @@ export default function CategoryWiseProducts() {
     }
 
 
-    const handleAddtoCart=(e)=>{
-
+    const handleAddtoCart=async(product)=>{
+        try {
+            await axios.post("http://localhost:5000/cart",{
+                "userID" : props.users.id,
+                "productID" : product.id,
+                "qty" : 1,
+                "price" : product.price
+            })
+            alert("Product Added in cart !!!")    
+        } catch (error) {
+            console.log(error);
+        }
     }
     
     return (
@@ -66,7 +78,10 @@ export default function CategoryWiseProducts() {
                 }
             </select>
             <hr></hr>
+
+                <h3> {props.users.name} ------ Cart</h3>
             <hr></hr>
+        
             {
                 products.map((product)=>(
                     <div style={{border:"2px solid black"}} key={product.id}>
@@ -76,7 +91,8 @@ export default function CategoryWiseProducts() {
                         <h3>Rs. {product.price}</h3>
                         <h6>Rattings : {product.rating}</h6>
                         <br></br>
-                       
+                        <button style={{border:"2px solid black"}} onClick={()=>handleAddtoCart(product)}>Add To Cart</button>
+                        <br></br>
                     </div>
                 ))
             }

@@ -43,6 +43,8 @@ export default function ViewProducts()
                         <h3>{product.name}</h3>
                         <h3>Rs. {product.price}</h3>
                         <h6>Rattings : {product.rating}</h6>
+
+                        
                     </div>
                 ))
             }
