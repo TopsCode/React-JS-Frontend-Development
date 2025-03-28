@@ -10,20 +10,7 @@ export default function MyCart() {
     const [cart,setCart] = useState([]);
     const [products,setProducts] = useState([]);
 
-    const fetchCartData=async()=>{
-        try {
-            let response = await axios.get(`http://localhost:5000/cart?userID=${userId}`)
-            setCart(response.data)
-            console.log("---->>>>",userId);
-            console.log("===> cart data :: ",response.data);
-        } catch (error) {
-            console.log(error);
-        }
-    }
-    useEffect(()=>{
-        fetchCartData();
-    },[userId])
-   
+
     const handleLogin=async(e)=>{
         e.preventDefault();
         const {email,password} = details;
@@ -39,9 +26,41 @@ export default function MyCart() {
         }
     }
 
-    const getProductDetails=()=>{
-        
+    const fetchCartData=async()=>{
+        try {
+            let response = await axios.get(`http://localhost:5000/cart?userID=${userId}`)
+            setCart(response.data)
+            console.log("---->>>>",userId);
+            console.log("===> cart data :: ",response.data);
+        } catch (error) {
+            console.log(error);
+        }
     }
+   
+
+    const fetchProductDetails =async()=>{
+        try {
+            let response = await axios.get(`http://localhost:5000/products`);
+            setProducts(response.data);
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
+    useEffect(()=>{
+        fetchCartData();
+        fetchProductDetails();
+    },[userId])
+    
+    // Merging cart items with Product Details 
+    const mergedCart = cart.map((item)=>{
+        const product = products.find((product) => product.id === item.productID);
+        return {
+            ...item,
+            name : product.name,
+            image : product.image,
+        }
+    })
 
     return (
         <div style={{margin:"20px"}}>
@@ -68,27 +87,35 @@ export default function MyCart() {
                 <h2>Shopping Cart</h2>
 
                 {
-                    cart.map((product)=>(
-                        <div className="cart-item">
-                            <img src="https://via.placeholder.com/80" alt="Product" className="cart-image" />
-                            <div className="cart-details">
-                                <h3>Product Name</h3>
-                                <p>Price: ₹999</p>
-                                <div className="quantity-control">
-                                    <button>-</button>
-                                    <span>1</span>
-                                    <button>+</button>
+                    mergedCart.length > 0 ? 
+                    (
+                        mergedCart.map((product)=>(
+                            <div className="cart-item" key={product.id}>
+                                <img src={product.image} alt="Product" className="cart-image" />
+                                <div className="cart-details">
+                                    <h3>{product.name}</h3>
+                                    <p>Price: {product.price}</p>
+                                    <div className="quantity-control">
+                                        <button>-</button>
+                                        <span>1</span>
+                                        <button>+</button>
+                                    </div>
                                 </div>
+                                <button className="remove-btn">Remove</button>
                             </div>
-                            <button className="remove-btn">Remove</button>
-                        </div>
-                    ))
+                        ))
+                    )   
+                    :
+                    <p>No products in cart</p>
                 }
+  
                 
                 <div className="cart-footer">
-                    <h3>Total: ₹3997</h3>
+                    {/* accumulator which store previous result */}
+                    <h3>Total: Rs. {mergedCart.reduce((accumulator,item) => accumulator + item.qty * item.price,0)}</h3>
                     <button className="checkout-btn">Checkout</button>
                 </div>
+               
 
             </div>
         </div>
