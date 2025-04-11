@@ -1,0 +1,36 @@
+------------------------------------------------------------------------
+npm install react-router-dom
+
+basic folder structure : 
+
+-> src 
+    - home.jsx
+    - about.jsx 
+    - contact.jsx
+
+
+useNavigate() : is a hook which is provided by react-router-dom library which is commonaly used for handling navigation in single page Application.
+
+useNavigate allows you to programatically change the URL in the browser.
+
+
+navigate(-1) : go backward one step
+navigate(1) : go forward one step
+
+navigate("/about",{replace:true}) :  This option replaces the current entry in the history stack instead of adding a new one. It’s like using history.replace instead of history.push.
+
+------------------------------------------------------------------------
+useLocation() : another hook which is provided by react-router-dom 
+    using of useLocation we can access current location object which represents the 
+    current URL in the browser.
+
+
+
+    -> location.pathname
+    -> location.search
+    -> location.hash
+    -> location.state
+
+------------------------------------------------------------------------
+useParams : is a hook which is provide by react router. 
+    that allows us to access the parameters defined in the route.
