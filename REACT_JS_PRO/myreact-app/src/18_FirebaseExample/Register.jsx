@@ -27,11 +27,13 @@ const Register = () => {
       const userCredential = await createUserWithEmailAndPassword(auth, email, password);
       const user = userCredential.user;
 
+      const profilePicture = "https://mir-s3-cdn-cf.behance.net/project_modules/hd/d95c1f148207527.62d1246c25004.jpg";
       
       await setDoc(doc(db, "users", user.uid), {
         name,
         email,
-        contact
+        contact,
+        profilePicture
       });
 
       alert("Registration successful!");

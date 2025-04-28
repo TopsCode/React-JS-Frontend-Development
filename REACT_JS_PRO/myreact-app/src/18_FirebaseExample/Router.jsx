@@ -7,6 +7,8 @@ import Login from "./Login";
 import Register from "./Register";
 import { auth } from "../firebase_config";
 import ProtectedRoute from "./ProtectedRoute";
+import AddPost from "./AddPost";
+
 
 function Router() {
   const [user, setUser] = useState(null);
@@ -34,6 +36,14 @@ function Router() {
           element={
             <ProtectedRoute user={user}>
               <Dashboard />
+            </ProtectedRoute>
+          }
+        />
+         <Route
+          path="/add-post"
+          element={
+            <ProtectedRoute user={user}>
+              <AddPost />
             </ProtectedRoute>
           }
         />
