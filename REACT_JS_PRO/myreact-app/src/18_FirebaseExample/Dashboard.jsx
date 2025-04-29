@@ -51,6 +51,9 @@ const Dashboard = () => {
       <Link to="/add-post">
         <button style={styles.addPostButton}>Add New Post</button>
       </Link>
+      <Link to="/view-all-post">
+        <button style={styles.addPostButton}>View All Post</button>
+      </Link>
 
       <button style={styles.logoutButton} onClick={handleLogout}>
         Logout

@@ -1,6 +1,8 @@
-import React, { useState } from "react";
+// src/components/AddPost.js
+import React, { useState, useEffect } from "react";
 import { db, auth } from "../firebase_config";
-import { collection, addDoc, serverTimestamp } from "firebase/firestore";
+import { collection, addDoc, serverTimestamp, doc, getDoc } from "firebase/firestore";
+import { onAuthStateChanged } from "firebase/auth";
 
 const AddPost = () => {
   const [form, setForm] = useState({
@@ -9,6 +11,32 @@ const AddPost = () => {
     imageUrl: "",
   });
   const [message, setMessage] = useState("");
+  const [name, setName] = useState("Loading...");
+
+  // Fetch username after Firebase Auth is ready
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, async (user) => {
+      if (user) {
+        try {
+          const userRef = doc(db, "users", user.uid);
+          const userSnap = await getDoc(userRef);
+
+          if (userSnap.exists()) {
+            setName(userSnap.data().name);  // Fetch the 'name' from Firestore
+          } else {
+            setName(user.email || "Unknown");
+          }
+        } catch (err) {
+          console.error("Error fetching name:", err);
+          setName(user.email || "Unknown");
+        }
+      } else {
+        setName("Unknown");
+      }
+    });
+
+    return () => unsubscribe(); // Cleanup listener
+  }, []);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -35,6 +63,7 @@ const AddPost = () => {
     try {
       await addDoc(collection(db, "posts"), {
         userId: auth.currentUser.uid,
+        username: name,  // Use 'name' instead of 'username'
         title,
         description,
         image: imageUrl,
@@ -44,7 +73,7 @@ const AddPost = () => {
       setMessage("Post added successfully!");
       setForm({ title: "", description: "", imageUrl: "" });
     } catch (error) {
-      console.error(error);
+      console.error("Error adding post:", error);
       setMessage("Failed to add post.");
     }
   };
@@ -52,6 +81,8 @@ const AddPost = () => {
   return (
     <div style={styles.container}>
       <h2>Add New Post (via Image URL)</h2>
+      <h3>Posting as: <strong>{name}</strong></h3>
+
       <form onSubmit={handleSubmit} style={styles.form}>
         <input
           name="title"
@@ -80,8 +111,11 @@ const AddPost = () => {
           required
           style={styles.textarea}
         />
-        <button type="submit" style={styles.button}>Add Post</button>
+        <button type="submit" style={styles.button}>
+          Add Post
+        </button>
       </form>
+
       {message && <p>{message}</p>}
     </div>
   );
