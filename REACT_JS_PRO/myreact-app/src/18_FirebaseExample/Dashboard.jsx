@@ -47,7 +47,9 @@ const Dashboard = () => {
       ) : (
         <p>Loading user data...</p>
       )}
-
+      <Link to="/my-post">
+        <button style={styles.addPostButton}>View My Posts</button>
+      </Link>
       <Link to="/add-post">
         <button style={styles.addPostButton}>Add New Post</button>
       </Link>

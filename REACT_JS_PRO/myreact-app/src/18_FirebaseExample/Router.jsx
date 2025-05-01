@@ -9,6 +9,7 @@ import { auth } from "../firebase_config";
 import ProtectedRoute from "./ProtectedRoute";
 import AddPost from "./AddPost";
 import ViewPostList from "./ViewAllPost";
+import MyPosts from "./MyPosts";
 
 
 function Router() {
@@ -55,6 +56,16 @@ function Router() {
               <ViewPostList/>
             </ProtectedRoute>
           }
+          
+        />
+        <Route
+          path="/my-post"
+          element={
+            <ProtectedRoute user={user}>
+              <MyPosts/>
+            </ProtectedRoute>
+          }
+          
         />
       </Routes>
     </BrowserRouter>
