@@ -10,6 +10,8 @@ import ProtectedRoute from "./ProtectedRoute";
 import AddPost from "./AddPost";
 import ViewPostList from "./ViewAllPost";
 import MyPosts from "./MyPosts";
+import ChatScreen from "./ChatScreen";
+import AllFriends from "./AllFriends";
 
 
 function Router() {
@@ -67,6 +69,19 @@ function Router() {
           }
           
         />
+      <Route path="/all-friends" element=
+          {
+            <ProtectedRoute user={user}>
+              <AllFriends/>
+            </ProtectedRoute>
+          } />
+          <Route path="/chat/:friendId" element=
+          {
+            <ProtectedRoute user={user}>
+              <ChatScreen/>
+            </ProtectedRoute>
+          } />
+
       </Routes>
     </BrowserRouter>
   );
