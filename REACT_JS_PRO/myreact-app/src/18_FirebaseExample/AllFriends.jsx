@@ -3,6 +3,8 @@ import React, { useEffect, useState } from "react";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "../firebase_config";
 import { useNavigate } from "react-router-dom";
+import { getAuth } from "firebase/auth";
+
 
 const AllFriends = () => {
   const [friends, setFriends] = useState([]);
@@ -10,13 +12,22 @@ const AllFriends = () => {
 
   useEffect(() => {
     const fetchUsers = async () => {
-      const usersSnapshot = await getDocs(collection(db, "Friends"));
-      const usersList = usersSnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+      const auth = getAuth();
+      const currentUser = auth.currentUser;
+  
+      if (!currentUser) return;
+  
+      const usersSnapshot = await getDocs(collection(db, "users"));
+      const usersList = usersSnapshot.docs
+        .map(doc => ({ id: doc.id, ...doc.data() }))
+        .filter(user => user.id !== currentUser.uid); // Exclude current user
+  
       setFriends(usersList);
     };
-
+  
     fetchUsers();
   }, []);
+  
 
   const goToChat = (friendId) => {
     navigate(`/chat/${friendId}`);
