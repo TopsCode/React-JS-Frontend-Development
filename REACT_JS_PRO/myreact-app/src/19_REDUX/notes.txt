@@ -1,0 +1,116 @@
+What is Redux?
+===========================
+
+Redux is a state management library for JavaScript applications, commonly used with React. It helps you manage and centralize the application state in a predictable way.
+
+---------------------------------------------------------------------------------
+
+Why Use Redux in React?
+===========================
+React has its own state management (using useState, useReducer, Context), but as your app grows:
+
+Passing state through props becomes messy (called "prop drilling").
+
+Multiple components may need to read/update the same data.
+
+Complex logic can get hard to track.
+
+===================================================
+Concept	Description
+
+Store	        Holds the state tree of the app
+Action	        A plain object describing what happened
+Reducer	        A function that describes how the state changes
+Dispatch	    A method to send an action to the store
+Provider	    A component from react-redux to make the store available to components
+useSelector	    React hook to access state
+useDispatch	    React hook to dispatch actions
+
+===================================================
+Types of Redux Implementations
+
+Classic Redux (with redux and react-redux)
+
+Redux Toolkit (RTK) – modern, recommended approach
+
+Custom Redux (Manual Implementation – for learning)
+===================================================
+
+Redux toolkit steps :::
+
+    #npm install @reduxjs/toolkit react-redux
+======================================
+step 1 : 
+
+=> Create Slice  :::  // features/counter/counterSlice.js
+
+import { createSlice } from '@reduxjs/toolkit';
+
+const counterSlice = createSlice({
+name: 'counter',
+initialState: { value: 0 },
+reducers: {
+    increment: (state) => {
+    state.value += 1;
+    },
+    decrement: (state) => {
+    state.value -= 1;
+    },
+},
+});
+
+export const { increment, decrement } = counterSlice.actions;
+export default counterSlice.reducer;
+
+=======================
+step 2 : set up the store 
+
+app/store.js 
+
+import { configureStore } from '@reduxjs/toolkit';
+import counterReducer from '../features/counter/counterSlice';
+
+export const store = configureStore({
+  reducer: {
+    counter: counterReducer,
+  },
+});
+=======================
+step 3 : features/counter/counter.jsx 
+
+import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { increment, decrement } from '../features/counter/counterSlice';
+
+function Counter() {
+  const count = useSelector((state) => state.counter.value);
+  const dispatch = useDispatch();
+
+  return (
+    <div>
+      <h1>{count}</h1>
+      <button onClick={() => dispatch(increment())}>+</button>
+      <button onClick={() => dispatch(decrement())}>-</button>
+    </div>
+  );
+}
+
+export default Counter;
+
+=======================
+step 4: define this 
+
+main.jsx 
+
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App';
+import { Provider } from 'react-redux';
+import { store } from './app/store';
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <Provider store={store}>
+    <App />
+  </Provider>
+);
