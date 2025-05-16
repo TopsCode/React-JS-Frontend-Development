@@ -114,3 +114,28 @@ root.render(
     <App />
   </Provider>
 );
+
+===============================
+createAsyncThunk is a function provided by Redux Toolkit to handle asynchronous 
+logic (like API calls) inside your Redux application.
+
+Instead of writing separate dispatch, try/catch, and action creators, we can use createAsyncThunk to automatically create actions for you:
+
+One action for starting the request (pending)
+
+One for success (fulfilled)
+
+One for failure (rejected)
+
+
+syntax : 
+----------------------
+import { createAsyncThunk } from '@reduxjs/toolkit';
+
+export const fetchData = createAsyncThunk(
+  'data/fetchData',      // action type name (must be unique)
+  async (arg, thunkAPI) => {
+    const response = await axios.get('/your-api-endpoint');
+    return response.data;  // this becomes action.payload in 'fulfilled'
+  }
+);
